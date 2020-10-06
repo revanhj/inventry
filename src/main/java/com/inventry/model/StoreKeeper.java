@@ -1,5 +1,7 @@
 package com.inventry.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,5 +25,7 @@ public class StoreKeeper {
 	private String name;
 	private String email;
 	private String phone;
+	private Date createdAt;
+	private Date updatedAt;
 	
 }
