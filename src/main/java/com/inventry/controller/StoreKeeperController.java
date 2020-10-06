@@ -18,6 +18,12 @@ public class StoreKeeperController {
 	private StoreKeeperService storeKeeperService;
 	
 	
+	
+	@RequestMapping(value = "/hi",method = RequestMethod.GET,produces = "application/json")
+	public String Hi() {
+		return "you have done 80% of hosting work";
+		
+	}
 	@RequestMapping(value = "",method = RequestMethod.POST,produces = "application/json")
 	public StoreKeeper StoreKeeperRegistretion(@RequestBody StoreKeeper storeKeeper) {
 		return storeKeeperService.StoreKeeperRegistretion(storeKeeper);
