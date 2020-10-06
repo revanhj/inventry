@@ -1,12 +1,15 @@
-version: 0.2
+version: 0.2version: 0.2
 
 phases:
+  build:
+    commands:
+      - echo Entered the build phase...
+      - mvn clean package
   post_build:
     commands:
-      - mvn package
-      - mv target/my-web-app ./
+      - echo Build completed successfully
 artifacts:
   files:
-    - my-web-app/**/*
- discard-paths: yes
+    - target/inventry-service.jar
+  discard-paths: yes
 
